@@ -23,10 +23,10 @@ app.use(cors('*'))
 const { randomUUID } = new shortid({ length: 10 })
 
 // INITIATE DB CONNECTION
-// db.connect(function (err) {
-//     if (err) throw err;
-//     console.log("Connected!");
-// });
+ db.connect(function (err) {
+    if (err) throw err;
+    console.log("Connected!");
+ });
 
 app.post('/shorten', (req, res) => {
     const { url } = req.body;
