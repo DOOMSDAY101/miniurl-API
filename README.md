@@ -1,3 +1,5 @@
+![Homepage image](./api-homepage.png)
+
 # miniURL - Link Shortening API
 
 miniURL is a simple and easy-to-use link shortening API that allows you to shorten long URLs into more manageable ones.
