@@ -48,7 +48,7 @@ app.post('/shorten', (req, res) => {
                     console.log(err)
                     return res.status(500).json({ error: 'Internal server error' });
                 }
-                return res.status(200).json({ originalUrl: url, shortUrl: `${process.env.SERVER_HOST}:${process.env.PORT}/${shorturlid}`, status: 200 })
+                return res.status(200).json({ originalUrl: url, shortUrl: `${process.env.SERVER_HOST}/${shorturlid}`, status: 200 })
             })
         }
     })
