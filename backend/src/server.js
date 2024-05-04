@@ -39,7 +39,7 @@ app.post('/shorten', (req, res) => {
         if (result.length > 0) {
             // If the original URL already has a short URL, send it to the user
             const { short_id } = result[0];
-            return res.status(200).json({ originalUrl: url, shortUrl: `${process.env.SERVER_HOST}:${process.env.PORT}/${short_id}`, status: 200 });
+            return res.status(200).json({ originalUrl: url, shortUrl: `${process.env.SERVER_HOST}/${short_id}`, status: 200 });
         } else {
             // Generate a new short ID and insert the original URL into the database
             let shorturlid = randomUUID();
@@ -48,7 +48,7 @@ app.post('/shorten', (req, res) => {
                     console.log(err)
                     return res.status(500).json({ error: 'Internal server error' });
                 }
-                return res.status(200).json({ originalUrl: url, shortUrl: `${process.env.SERVER_HOST}:${process.env.PORT}/${shorturlid}`, status: 200 })
+                return res.status(200).json({ originalUrl: url, shortUrl: `${process.env.SERVER_HOST}/${shorturlid}`, status: 200 })
             })
         }
     })
