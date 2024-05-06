@@ -20,6 +20,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/DOOMSDAY101/miniurl-API"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
